@@ -61,9 +61,11 @@ For example:
 
     $statsdClient->increment('counter.ingestedRecords', array('record_type' => $recordType));
 
-### MTU
+### Packet aggregation
 
 Our library support measurements aggregation in output packets.
+
+This allows to reduce considerably the amount of packets transiting on the network.
 
 For this to be enabled, you need to pass a non-empty MTU as a third parameter to the client constructor.
 
